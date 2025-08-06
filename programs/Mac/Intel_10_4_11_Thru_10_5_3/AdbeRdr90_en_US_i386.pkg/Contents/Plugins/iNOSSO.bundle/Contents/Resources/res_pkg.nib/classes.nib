@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = InstallerPane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                contentView = NSView; 
+                firstKeyView = NSView; 
+                initialKeyView = NSView; 
+                lastKeyView = NSView; 
+                nextPane = InstallerPane; 
+                parentSection = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = InstallerSection; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {firstPane = InstallerPane; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = PkgNossoProgress; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                uiProgressbar = NSProgressIndicator; 
+                uiTStatus = NSTextField; 
+                uiTWait = NSTextField; 
+            }; 
+            SUPERCLASS = InstallerPane; 
+        }
+    ); 
+    IBVersion = 1; 
+}

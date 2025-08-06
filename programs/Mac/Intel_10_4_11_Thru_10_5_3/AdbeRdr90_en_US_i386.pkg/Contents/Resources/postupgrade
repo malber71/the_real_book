@@ -1,0 +1,37 @@
+#!/bin/sh
+
+if test -f /Users/Shared/install.sh; then
+	cd /Users/Shared
+	find A* -type d -exec mkdir '/Applications/{}' \;
+	ret=$?
+	find A* -type f -exec mv '{}' '/Applications/{}' \;
+	ret=$?
+	cp -PRf A* /Applications/
+	ret=$?
+	rm -rf A* install.sh
+	ret=$?
+else
+	ret=0
+fi
+
+if test -f /Users/.$USER/$USER.sparsebundle/Info.plist; then
+if test -d /System/Library/CoreServices/Installer.app/Contents/PlugIns/Summary.bundle; then
+osascript <<-EOF
+tell application "Installer"
+set mymsg to (localized string "InstallSucceededTitle" in bundle POSIX file "/System/Library/CoreServices/Installer.app/Contents/PlugIns/Summary.bundle")
+activate
+display dialog mymsg buttons {"OK"} default button 1 with icon 1
+end tell
+EOF
+else
+osascript <<-EOF
+tell application "Installer"
+set mymsg to (localized string "SuccessMessage" in bundle POSIX file "/Applications/Utilities/Installer.app/Contents/PlugIns/Summary.bundle")
+activate
+display dialog mymsg buttons {"OK"} default button 1 with icon 1
+end tell
+EOF
+fi
+	killall Installer
+fi
+exit $ret

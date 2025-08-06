@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>NOS Installer</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Adobe Reader 9 version 2.0.0.21, Copyright (C) 2008 by NOS Microsystems Ltd.  All rights reserved.</string>
+	<key>CFBundleIconFile</key>
+	<string>adobe_netop</string>
+	<key>CFBundleIdentifier</key>
+	<string>Adobe Reader 9 by NOS Microsystems Ltd.</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>Adobe Reader 9 version 2.0.0.21</string>
+	<key>CFBundleVersion</key>
+	<string>2.0.0.21</string>
+	<key>LSRequiresNativeExecution</key>
+	<true/>
+	<key>LSUIElement</key>
+	<string>1</string>
+	<key>NSMainNibFile</key>
+	<string>res_pkg</string>
+	<key>NSPrincipalClass</key>
+	<string>InstallerSection</string>
+	<key>OSVersion</key>
+	<string>4163</string>
+</dict>
+</plist>
